@@ -1,0 +1,25 @@
+##requriments for deploy this project
+#PYTHON3
+#PYTHON VIRTUALENV (OPPTIONL)
+#CODE EDITIOR
+#run this in cmd  
+#steps
+$cd Gym_management
+$pip install virtualenv
+$virtualenv .
+$pip install django
+$pyhton manage.py runser
+# Now admin password you need {as per now u= admin, p=admi
+#in cmd 
+$python manage.py createsuperuser admin
+#than fill the requriments and set password
+#in localhost http://127.0.0.1:8000/
+# * user =admin
+# *password = admin
+$python manage.py makemigrations
+$pyton manage.py migrate
+$python manage.py sqlmigrate 0001
+
+
+#finshed.
+#deploy successfully
