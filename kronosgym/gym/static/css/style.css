@@ -1,0 +1,12 @@
+.nav-link{
+    color: rgb(247, 247, 238) !important;
+}
+
+.nav-link:hover{
+    color: black !important;
+}
+
+hr.rounder{
+  border-top: 8px solid lightblue;
+  border-radius: 5px;
+}
