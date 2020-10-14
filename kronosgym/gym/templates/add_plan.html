@@ -15,7 +15,7 @@
         <input type="text" name="duration" class="form-control" required>
 
         <br>
-        <input type=submit value="Submit" class="form-control btn btn-primary">
+        <input type="submit" value="Submit" class="form-control btn btn-primary">
       </form>
 </div>
 
@@ -23,7 +23,7 @@
 {% ifequal error "no" %}
 <script>
   alert('Record saved successfully');
-  window.location=('{% url 'view_plan' %}');
+  window.location=("{% url 'view_plan' %}");
 </script>
 {% endifequal  %}
 
