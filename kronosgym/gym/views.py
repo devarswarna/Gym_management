@@ -62,7 +62,7 @@ def Add_enq(request):
         a=request.POST['age']
         g = request.POST['gender']
         try:
-            Enquiry.objects.create(name=n,contact=c,emailid=e,age=a,gender=g)
+            Enquiry.objects.create(name=n,contact=c,email=e,age=a,gender=g)
             error="no"
         except:
             error="yes"
@@ -135,7 +135,7 @@ def Add_Plan(request):
         a=request.POST['amount']
         du=request.POST['duration']
         try:
-            Plan.objects.create(name=n,amount=a,duration=d)
+            Plan.objects.create(name=n,amount=a,duration=du)
             error="no"
         except:
             error="yes"
@@ -176,10 +176,10 @@ def Add_Member(request):
         j=request.POST['joindate']
         ex=request.POST['expiredate']
         i=request.POST['initalamount']
-        plan=Plan.objects.filter(name=p).first()
+        plans=Plan.objects.filter(name=p).first()
         try:
             Member.objects.create(name=n,contact=c,email=e,age=a,
-            gender=g,plan=plan,joindate=j,expiredate=ex,initalamount=i)
+            gender=g,plan=plans,joindate=j,expiredate=ex,initalamount=i)
             error="no"
         except:
             error="yes"
@@ -196,9 +196,9 @@ def View_Member(request):
     return render(request,'view_member.html', d)
 
 
-def Delete_Memeber(request,pid):
+def Delete_Member(request,pid):
     if not request.user.is_staff:
         return redirect('login')
-    member=Memeber.objects.get(id=pid)
+    member=Member.objects.get(id=pid)
     member.delete()
     return render('view_Member')
