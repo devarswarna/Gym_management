@@ -4,7 +4,7 @@
 
 
 <div class="container" style="margin-top:60px">
-<h2 class="text-center text-primary font-weight-bold">view Enquery</h2>
+<h2 class="text-center text-primary font-weight-bold">view Equipment</h2>
 
 <table class="table table-hover" id="example">
   <thead>
@@ -29,10 +29,11 @@
       <td>{{i.email}}</td>
       <td>{{i.age}}</td>
       <td>{{i.gender}}</td>
+      <td>{{i.plan}}</td>
       <td>{{i.joindate}}</td>
       <td>{{i.expiredate}}</td>
       <td>{{i.initalamount}}</td>
-      <td><a class="btn btn-danger" href="{% url 'delete_enquiry' i.id %}" onclick="return confirm('Are your sure ?')"></a>Delete</td>
+      <td><a  class="btn btn-danger" href="{% url 'delete_member' i.id %}" onclick="return confirm('Are your sure ?')"></a>Delete</td>
     </tr>
     {% endfor %}
   </tbody>
