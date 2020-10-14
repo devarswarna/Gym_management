@@ -23,7 +23,7 @@ urlpatterns = [
 
     path('add_member',Add_Member,name='add_member'),
     path('view_member',View_Member,name="view_member"),
-    path('delete_memmber(?P<int:pid>)',Delete_Memeber,name='delete_memmber'),
+    path('delete_member(?P<int:pid>)',Delete_Member,name='delete_member'),
 
 
 
