@@ -25,6 +25,4 @@ urlpatterns = [
     path('view_member',View_Member,name="view_member"),
     path('delete_member(?P<int:pid>)',Delete_Member,name='delete_member'),
 
-
-
 ]
