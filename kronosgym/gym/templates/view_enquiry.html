@@ -22,10 +22,11 @@
     <tr>
       <td>{{i.name}}</td>
       <td>{{i.contact}}</td>
-      <td>{{i.emailid}}</td>
+      <td>{{i.email}}</td>
       <td>{{i.age}}</td>
       <td>{{i.gender}}</td>
-      <td><a class="btn btn-danger" href="{% url 'delete_enquiry' i.id %}" onclick="return confirm('Are your sure ?')"></a>Delete</td>
+      <td><a  class="btn btn-danger" href="{% url 'delete_enq' i.id %}" onclick="return confirm('Are your sure ?')"></a>Delete</td>
+
     </tr>
     {% endfor %}
   </tbody>
